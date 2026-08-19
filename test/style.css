@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  padding-top: 4rem;
+}
+
+#Press {
+  border: 1px solid white;
+  border-radius: 0.8rem;
+  background-color: rgb(0, 2, 43);
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 200px;
+  height: 100px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#Press:hover {
+  background-color: rgba(0, 1, 35, 0.933);
+}
