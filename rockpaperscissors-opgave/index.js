@@ -12,32 +12,15 @@ const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 
-rockBtn.addEventListener("click", rockClicked);
-paperBtn.addEventListener("click", paperClicked);
-scissorsBtn.addEventListener("click", scissorsClicked);
+rockBtn.addEventListener("click", clicked);
+paperBtn.addEventListener("click", clicked);
+scissorsBtn.addEventListener("click", clicked);
 
-function rockClicked() {
+function clicked(e) {
+  user.classList.remove("rock", "paper", "scissors");
+  computer.classList.remove("rock", "paper", "scissors");
+  userChoice = e.target.className;
   reset(true);
-
-  userChoice = "rock";
-
-  //   console.log("ROCK CLICKED");
-  makeChoice();
-}
-
-function paperClicked() {
-  reset(true);
-
-  userChoice = "paper";
-  //   console.log("PAPER CLICKED");
-  makeChoice();
-}
-
-function scissorsClicked() {
-  reset(true);
-
-  userChoice = "scissors";
-  //   console.log("SCISSORS CLICK");
   makeChoice();
 }
 
@@ -53,24 +36,23 @@ function countDown() {
 }
 
 function showChoice() {
-  if (userChoice == "paper") {
-    // Equality operator
-    userId.classList.add("paper");
-  } else if (userChoice == "scissors") {
-    userId.classList.add("scissors");
-  } else if (userChoice == "rock") {
-    userId.classList.add("rock");
-  }
-  if (computerChoice == "paper") {
-    computerId.classList.add("paper");
-  } else if (computerChoice == "scissors") {
-    computerId.classList.add("scissors");
-  } else if (computerChoice == "rock") {
-    computerId.classList.add("rock");
-  }
-
-  //  user.classList.add(userChoice);
-  //   computer.classList.add(computerChoice);
+  // if (userChoice == "paper") {
+  //   // Equality operator
+  //   userId.classList.add("paper");
+  // } else if (userChoice == "scissors") {
+  //   userId.classList.add("scissors");
+  // } else if (userChoice == "rock") {
+  //   userId.classList.add("rock");
+  // }
+  // if (computerChoice == "paper") {
+  //   computerId.classList.add("paper");
+  // } else if (computerChoice == "scissors") {
+  //   computerId.classList.add("scissors");
+  // } else if (computerChoice == "rock") {
+  //   computerId.classList.add("rock");
+  // }
+  user.classList.add(userChoice);
+  computer.classList.add(computerChoice);
   showResult();
 }
 
