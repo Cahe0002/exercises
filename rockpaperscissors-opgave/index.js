@@ -88,3 +88,5 @@ function reset(clearBoard) {
     draw.classList.add("hidden");
   }
 }
+
+// Mdn - W3Schools - Youtube - Google //
