@@ -3,16 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="number2.js" defer></script>
     <title>Gæt et tal</title>
   </head>
   <body>
-    <h1>Computer gæt et tal</h1>
-    <input type="number" min="1" max="100" required id="choose" />
-    <div>
-      <button>For lavt</button>
-      <button>For højt</button>
-      <button>Rigtigt</button>
-    </div>
+    <main>
+      <section>
+        <div>
+          <h1>GÆT ET TAL OMBYTTET</h1>
+          <p class="guess"></p>
+          <button class="start">Start</button>
+        </div>
+        <!-- <input type="number" min="1" max="100" required id="choose" /> -->
+        <div id="buttonstyle">
+          <button class="toolow">For lavt</button>
+          <button class="toohigh">For højt</button>
+          <button class="correct">Computeren gættede rigtigt!</button>
+        </div>
+        <p>Forsøg</p>
+      </section>
+    </main>
   </body>
 </html>
