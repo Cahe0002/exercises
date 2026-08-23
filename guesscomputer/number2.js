@@ -6,11 +6,13 @@ const computerGuess = document.querySelector(".guess");
 const tooHighButton = document.querySelector(".toohigh");
 const tooLowButton = document.querySelector(".toolow");
 const correctButton = document.querySelector(".correct");
+const computerText = document.querySelector("#computertext");
 
 let min = 1;
 let max = 100;
 let matRandom;
 let gameStarted = false;
+let computerCount = 0;
 
 tooHighButton.disabled = true;
 tooLowButton.disabled = true;
@@ -23,18 +25,23 @@ startButton.addEventListener("click", startGame);
 
 function startGame() {
   gameStarted = true;
+  startButton.disabled = true;
   tooHighButton.disabled = false;
   tooLowButton.disabled = false;
   correctButton.disabled = false;
   min = 1;
   max = 100;
+  computerCount = 0;
+  computerText.textContent = `Antal gæt: ${computerCount}`;
 
   randomNumber();
 }
 
 function randomNumber() {
-  matRandom = Math.floor((min + max) / 2);
+  matRandom = Math.floor(Math.random() * (max - min + 1)) + min;
   computerGuess.textContent = matRandom;
+  computerCount++;
+  computerText.textContent = `Antal gæt: ${computerCount}`;
 }
 
 function clicked(e) {
@@ -48,12 +55,14 @@ function clicked(e) {
     min = matRandom + 1;
     randomNumber();
   } else if (e.target === correctButton) {
-    if (matRandom === secretNumber) {
-      correctButton.textContent = "Computeren gættede rigtigt!";
-      startGame();
-    } else if (matRandom < secretNumber) {
-      console.log("det er for lavt");
-    }
+    tooHighButton.disabled = true;
+    tooLowButton.disabled = true;
+    correctButton.disabled = true;
+    startButton.disabled = false;
+    gameStarted = false;
+    confetti({
+      color: ["rgb(79, 56, 56)", "#ffff", "#ffe985"], // Color for the confetti)
+    });
   }
 }
 

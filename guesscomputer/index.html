@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@hiseb/confetti@2.2.0/dist/confetti.min.js"></script>
+    <!-- Confetti script from google -->
+
     <script src="number2.js" defer></script>
     <title>Gæt et tal</title>
   </head>
@@ -12,16 +15,16 @@
       <section>
         <div>
           <h1>GÆT ET TAL OMBYTTET</h1>
-          <p class="guess"></p>
+
           <button class="start">Start</button>
+          <h2 class="guess"></h2>
         </div>
-        <!-- <input type="number" min="1" max="100" required id="choose" /> -->
         <div id="buttonstyle">
           <button class="toolow">For lavt</button>
           <button class="toohigh">For højt</button>
           <button class="correct">Computeren gættede rigtigt!</button>
         </div>
-        <p>Forsøg</p>
+        <p id="computertext"></p>
       </section>
     </main>
   </body>
