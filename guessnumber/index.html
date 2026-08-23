@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="number.js" defer></script>
+    <title>Gæt et tal</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div>
+          <h1>Gæt et tal</h1>
+          <form>
+            <input
+              id="guessInput"
+              type="number"
+              placeholder="Indtast tal 1-100"
+              required
+            />
+            <button id="guessButton" type="button">Svar</button>
+          </form>
+        </div>
+        <div id="buttonstyle">
+          <p id="feedback"></p>
+          <p id="guessText"></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

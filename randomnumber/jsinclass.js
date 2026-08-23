@@ -20,3 +20,13 @@ function lavEtTal() {
 //   console.log("Value is truthy");
 // } else { console.log ("Value is falsy");
 // }
+
+// "use strict";
+
+// const animal = "ulv";
+// const karakter = 12;
+
+// // const ulveText = "Det er en dejlig" + animal; // Forskellige måder at skrive (Den gamle måde)
+// const ulveText = `Det er en dejlig ${animal} der får karakteren ${karakter}`; // Backticks med string literal ${}
+
+// console.log(ulveText);

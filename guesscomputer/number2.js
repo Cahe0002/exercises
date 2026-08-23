@@ -1,3 +1,5 @@
+"use strict";
+
 const startButton = document.querySelector(".start");
 
 const computerGuess = document.querySelector(".guess");

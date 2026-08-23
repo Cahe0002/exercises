@@ -90,3 +90,24 @@ function reset(clearBoard) {
 }
 
 // Mdn - W3Schools - Youtube - Google //
+
+//
+
+// function returWinner() {
+//     if (userChoice === computerChoice) {
+//     // === means Strict equality operator
+//     draw.classList.remove("hidden");
+//   } else if (
+//     (userChoice === "rock" && computerChoice === "scissors") || // && = Logical AND || = Logical OR
+//     (userChoice === "paper" && computerChoice === "rock") ||
+//     (userChoice === "scissors" && computerChoice === "paper")
+//   ) {
+//     win.classList.remove("hidden");
+//   } else {
+//     lose.classList.remove("hidden");
+
+//     console.log("userChoice", userChoice);
+//     console.log("computerChoice", computerChoice);
+//   }
+
+// }

@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  background-color: rgb(201, 196, 185);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  border: solid 3px rgb(79, 56, 56);
+  background-color: rgb(232, 232, 232);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: 350px;
+  min-height: 250px;
+}
+
+h1 {
+  padding: 1rem;
+  text-transform: uppercase; /* Makes text with big letters */
+}
+
+input {
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border-style: none;
+  outline-color: rgb(79, 56, 56);
+}
+
+p {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+button {
+  border: 1px solid white;
+  background-color: rgb(79, 56, 56);
+  margin-left: 0.5rem;
+  color: white;
+  max-width: 100%;
+  padding: 1em 2em;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  color: white;
+}
+
+#feedback,
+#guessText {
+  min-height: 1.5rem; /* Make min-height for the text, before showing*/
+}
