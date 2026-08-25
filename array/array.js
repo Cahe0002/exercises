@@ -6,58 +6,58 @@
 
 // console.log(letters[4]);
 
-const people = ["Harry", "Ron", "Hermione"];
-let result;
+// const people = ["Harry", "Ron", "Hermione"];
+// let result;
 
-result = people.push("Draco");
+// result = people.push("Draco");
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-result = people.pop();
+// result = people.pop();
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-result = people.push("Neville");
+// result = people.push("Neville");
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-result = people.push("Luna");
+// result = people.push("Luna");
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-result = people.slice(0, 3);
+// result = people.slice(0, 3);
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-result = people.slice(1, 0, "Cho");
+// result = people.slice(1, 0, "Cho");
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-people[1] = "Ginny";
+// people[1] = "Ginny";
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-result = people.push("Fred", "George");
+// result = people.push("Fred", "George");
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-result = people.indexOf("Fred");
+// result = people.indexOf("Fred");
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
-result = people.slice(result, 1);
+// result = people.slice(result, 1);
 
-console.log("people", people);
-console.log("result", result);
+// console.log("people", people);
+// console.log("result", result);
 
 // function firedOrhired(action, person) {
 //   action(person);
@@ -86,3 +86,79 @@ console.log("result", result);
 // function fired(person) {
 //   person.hired = false;
 // }
+
+// const people = ["Harry", "Ron", "Hermione", "Neville"];
+
+// function testParms(a, b, c, d) {
+//   console.log(`a: ${a}, b: ${b}, c: ${c}, d: ${d}`);
+// }
+
+// people.forEach(testParms);
+
+// function sayHello(person) {
+//   console.log(`Hello ${person}`);
+// }
+
+// sayHello(people[0]);
+// sayHello(people[1]);
+// sayHello(people[2]);
+// sayHello(people[3]);
+
+// people.forEach(sayHello);
+
+const animals = [
+  {
+    name: "Mandu",
+    type: "cat",
+  },
+
+  {
+    name: "Mia",
+    type: "cat",
+  },
+
+  {
+    name: "Mona",
+    type: "dog",
+  },
+
+  {
+    name: "Freddie",
+    type: "dog",
+  },
+];
+
+function all(animal) {
+  return true;
+}
+
+function none(animal) {
+  return false;
+}
+
+// console.log("ALL", animals.filter(all));
+// console.log("NONE", animals.filter(none));
+
+function isCat(animal) {
+  if (animal.type === "cat") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const onlyCats = animals.filter(isCat);
+console.log("onlyCats", onlyCats);
+
+// console.log(animals.filter(isCat));
+
+function isDog(animal) {
+  if (animal.type === "dog") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+const onlyDogs = animals.filter(isDog);
+console.log("onlyDog", onlyDogs);

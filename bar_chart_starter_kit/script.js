@@ -17,3 +17,5 @@ function generateColumns() {
 }
 
 setInterval(generateColumns, 500);
+
+

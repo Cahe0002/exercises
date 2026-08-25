@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+ul {
+  display: flex;
+  padding: 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+.breadcrumb-item a {
+  color: blue;
+}
+
+.seperator {
+  margin: 0rem 0.5rem;
+}
+
+#bshow {
+  padding: 0.2rem;
+}
