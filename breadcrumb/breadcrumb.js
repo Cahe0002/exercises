@@ -10,9 +10,9 @@ const bc = [
   },
 ]; // arrays data
 
-const breadCrumb = document.querySelector("#bshow");
+const breadCrumb = document.querySelector("#bshow"); // add the button #bshow
 
-breadCrumb.addEventListener("click", showBreadCrumps);
+breadCrumb.addEventListener("click", showBreadCrumps); // addEventListener, when clicking breadCrumb.
 
 function showBreadCrumps() {
   document.querySelector("ul").innerHTML = generateBreadCrumb(); // function runs and return HTML string.
@@ -30,7 +30,7 @@ function generateBreadCrumb() {
 
     if (!isFirst) {
       // ! means if isFirst is not true
-      text += `<span class="seperator"> / </span>`;
+      text += `<span class="seperator"> / </span>`; //adding the "/" with span
     }
 
     if (isLast) {
