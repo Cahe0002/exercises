@@ -30,7 +30,7 @@ function generateBreadCrumb() {
 
     if (!isFirst) {
       // ! means if isFirst is not true
-      text += `<span class="seperator"> / </span>`; //adding the "/" with span
+      text += `<span class="separator"> / </span>`; //adding the "/" with span
     }
 
     if (isLast) {
@@ -62,3 +62,9 @@ function generateBreadCrumb() {
 // }
 
 // console.log(Lavstr());
+
+
+//How to close the button with ? and :
+// function showBreadCrumps() { 
+// const ul = document.querySelector("ul");
+// ul.innerHTML = ul.innerHTML === "" ? generateBreadCrumb() : ""; }

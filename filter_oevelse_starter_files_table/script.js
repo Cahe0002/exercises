@@ -34,18 +34,33 @@ const electricVehicles = vehicles.filter(
   (vehicle) => vehicle.fuel === "Benzin",
 );
 
+const twoSeats = vehicles.filter((vehicle) => vehicle.passengers > 2);
+
+const electricJonas = vehicles.filter(
+  (vehicle) => vehicle.isElectric === true && vehicle.ownedBy === "Jonas", // && means "and" if both a true
+);
+
+const fuelMoreThanOne = vehicles.filter(
+  (vehicle) => vehicle.fuel === "Rugbrød" && vehicle.passengers > 1, // > 1 (Bigger than)
+);
+
 showTheseVehicles(vehicles);
 
 function showTheseVehicles(arr) {
   arr.forEach((each) => {
     tbodyPointer.innerHTML += `<tr>
   <td>${each.type}</td>
-  <td>${each.fuel}</td>
+  <td>${each.fuel ?? ""}</td>
   <td>${each.passengers}</td> 
-  <td>${each.stops}</td>
-  <td>${each.ownedBy}</td>
-  <td>${each.isElectric}</td>
+  <td>${each.stops ? each.stops.join(", ") : ""}</td>
+  <td>${each.ownedBy ?? ""}</td>
+  <td>${each.isElectric ? "X" : ""}</td>
   <td>${each.isTandem ? "X" : ""}</td>
 </tr>`;
   });
 }
+
+// Join returns a new string
+
+// Nullish coalescing operator (??)
+// "use a if it exists (isn't null or undefined), otherwise use b."
