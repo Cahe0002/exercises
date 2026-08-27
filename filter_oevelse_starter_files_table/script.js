@@ -27,26 +27,52 @@ const vehicles = [
   { type: "Knallert", fuel: "Benzin", passengers: 1, ownedBy: "Jonas" },
   { type: "Løbehjul", passengers: 1, isElectric: true },
 ];
+
+// const filterActive = document.querySelector("#filter button").dataset.filter;
+// console.log(filterActive);
+
+// function isElectricAndOwnedByJonas(vehicle) {
+//   return vehicle.isElectric === true && vehicle.ownedBy === "Jonas";
+// }
+
+// const ownedByJonas = vehicles.filter(isElectricAndOwnedByJonas);
+
+// console.log(ownedByJonas);
+
+const filterBtn = document.querySelectorAll(".filter_btn"); // select all filter buttons(Nodelist)
+filterBtn.forEach((btn) => {
+  btn.addEventListener("click", filterActive);
+});
+
 const tbodyPointer = document.querySelector("tbody");
 
-// const electricVehicles = vehicles.filter((vehicle) => vehicle.isElectric);
-const electricVehicles = vehicles.filter(
-  (vehicle) => vehicle.fuel === "Benzin",
-);
+const electricVehicles = vehicles.filter((vehicle) => vehicle.isElectric);
 
 const twoSeats = vehicles.filter((vehicle) => vehicle.passengers > 2);
 
 const electricJonas = vehicles.filter(
-  (vehicle) => vehicle.isElectric === true && vehicle.ownedBy === "Jonas", // && means "and" if both a true
+  (vehicle) => vehicle.isElectric === true && vehicle.ownedBy === "Jonas", // && means "and" if both are true
 );
 
 const fuelMoreThanOne = vehicles.filter(
   (vehicle) => vehicle.fuel === "Rugbrød" && vehicle.passengers > 1, // > 1 (Bigger than)
 );
 
-showTheseVehicles(vehicles);
+function filterActive(e) {
+  // e = click event
+  const filter = e.currentTarget.dataset.filter;
+
+  if (filter === "all") showTheseVehicles(vehicles);
+  else if (filter === "electric") showTheseVehicles(electricVehicles);
+  else if (filter === "two") showTheseVehicles(twoSeats);
+  else if (filter === "jonas") showTheseVehicles(electricJonas);
+  else if (filter === "ryebread") showTheseVehicles(fuelMoreThanOne);
+}
+
+// showTheseVehicles(vehicles);
 
 function showTheseVehicles(arr) {
+  tbodyPointer.innerHTML = ""; // reset button, before adding new rows
   arr.forEach((each) => {
     tbodyPointer.innerHTML += `<tr>
   <td>${each.type}</td>
@@ -59,6 +85,8 @@ function showTheseVehicles(arr) {
 </tr>`;
   });
 }
+
+showTheseVehicles(vehicles); // show all array to start with
 
 // Join returns a new string
 
