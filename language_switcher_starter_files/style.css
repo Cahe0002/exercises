@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: lightblue;
+  margin: 2rem;
+}
+
+label {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+img {
+  width: 25%;
+  margin: 2rem;
+}
+
+header,
+footer {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 8rem;
+}

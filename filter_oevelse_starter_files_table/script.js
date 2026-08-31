@@ -39,7 +39,7 @@ const vehicles = [
 
 // console.log(ownedByJonas);
 
-const filterBtn = document.querySelectorAll(".filter_btn"); // select all filter buttons(Nodelist)
+const filterBtn = document.querySelectorAll(".filter_btn"); // select all filter buttons (Nodelist)
 filterBtn.forEach((btn) => {
   btn.addEventListener("click", filterActive);
 });
@@ -48,7 +48,7 @@ const tbodyPointer = document.querySelector("tbody");
 
 const electricVehicles = vehicles.filter((vehicle) => vehicle.isElectric);
 
-const twoSeats = vehicles.filter((vehicle) => vehicle.passengers > 2);
+const twoSeats = vehicles.filter((vehicle) => vehicle.passengers > 2); // More than 2
 
 const electricJonas = vehicles.filter(
   (vehicle) => vehicle.isElectric === true && vehicle.ownedBy === "Jonas", // && means "and" if both are true
@@ -92,3 +92,16 @@ showTheseVehicles(vehicles); // show all array to start with
 
 // Nullish coalescing operator (??)
 // "use a if it exists (isn't null or undefined), otherwise use b."
+
+// Filter
+
+// const filters = {
+//   electric: electricVehicles,
+//   two: twoSeats,
+//   jonas: electricJonas,
+//   ryebread: fuelMoreThanOne,
+// };
+
+// document.querySelectorAll("button").forEach((button => {
+// button.addEventListener("click", () => {
+// document.querySelectorAll.classList.add(".filter_btn")})

@@ -37,7 +37,7 @@ button {
   grid-template-columns: repeat(5, 1fr);
 }
 
-button:hover {
+button {
   background-color: bisque;
   color: black;
   cursor: pointer;

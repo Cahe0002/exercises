@@ -18,6 +18,9 @@ function showBreadCrumps() {
   document.querySelector("ul").innerHTML = generateBreadCrumb(); // function runs and return HTML string.
 }
 
+
+// let resultat = "";
+
 function generateBreadCrumb() {
   let text = ""; // emty string there building up
   bc.forEach((item, index) => {
@@ -42,6 +45,9 @@ function generateBreadCrumb() {
   });
   return text; // return the string, so showBreadCrumb can use it
 }
+
+// resultat += `${item.name}`
+// else resultat += `<a href="${item.link}"> ${item.name}</a> + "/";`
 
 //   bc.forEach((product) => {
 //     console.log(`${product.name}`);
@@ -68,3 +74,5 @@ function generateBreadCrumb() {
 // function showBreadCrumps() { 
 // const ul = document.querySelector("ul");
 // ul.innerHTML = ul.innerHTML === "" ? generateBreadCrumb() : ""; }
+
+// Non breaking space - space not removing

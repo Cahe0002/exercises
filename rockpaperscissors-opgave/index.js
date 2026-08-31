@@ -2,6 +2,13 @@
 let userChoice;
 let computerChoice;
 
+// Enum - UPPERCASE
+
+// const CHOICE = object.freeze {ROCK: "ROCK", PAPER: "PAPER", SCISSORS: "SCISSORS" };
+
+// function scissorsClicked() {
+// } makeChoice(CHOICE.SCISSORS);
+
 const choices = ["rock", "paper", "scissors"]; //array for different options
 const user = document.querySelector("#player1");
 const computer = document.querySelector("#player2");
