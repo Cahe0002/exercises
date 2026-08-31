@@ -26,6 +26,11 @@ img {
   margin: 2rem;
 }
 
+hr {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
 header,
 footer {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;

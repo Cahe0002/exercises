@@ -15,7 +15,7 @@ const texts = {
 
 const languageSelect = document.querySelector("#language-select");
 
-const locale = "de"; // start in "de"
+const locale = "da"; // start in "de"
 
 function changeLanguage(locale) {
   const selectedLanguage = texts[locale].texts; // if locale is "de" or "da" in [locale]
@@ -28,7 +28,7 @@ function changeLanguage(locale) {
   });
 }
 
-changeLanguage("de"); // Starting at "de"
+changeLanguage("da"); // Starting at "de"
 
 languageSelect.addEventListener("change", () => {
   // "change" function like click and input () => Arrow function. Short way to write a function
