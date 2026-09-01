@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+main {
+  height: 100vh;
+}
+
+header {
+  background-color: var(--header-bg-col);
+  color: var(--text-color);
+  height: 80px;
+}
+
+.theme {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+}
+
+p,
+.theme {
+  margin-right: 2rem;
+}
+
+p {
+  color: var(--text-color);
+}
+
+footer {
+  background-color: var(--header-bg-col);
+  color: var(--text-color);
+  height: 180px;
+}

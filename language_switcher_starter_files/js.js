@@ -20,7 +20,7 @@ const locale = "da"; // start in "de"
 function changeLanguage(locale) {
   const selectedLanguage = texts[locale].texts; // if locale is "de" or "da" in [locale]
   selectedLanguage.forEach((value) => {
-    // for each value.location (.header and footer)
+    // for each value.location (.header and .footer)
     const select = document.querySelector(value.location);
     if (select) {
       select.textContent = value.text; // if select (value.location) = select.textContent(HTML text) = value.text(Das Bot or Båden)
