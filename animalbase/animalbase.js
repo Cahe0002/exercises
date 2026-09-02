@@ -19,7 +19,7 @@ const currentSettings = {
 
 function start() {
   console.log("ready");
-  const filterBtn = document.querySelectorAll("button");
+  const filterBtn = document.querySelectorAll("[data-action='filter']");
   filterBtn.forEach((btn) => {
     btn.addEventListener("click", filterActive);
   });
