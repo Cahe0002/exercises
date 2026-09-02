@@ -3,7 +3,7 @@
 document.querySelector("select").addEventListener("click", themeSelect);
 
 function themeSelect(event) {
-  document.body.dataset.theme = event.target.value; 
+  document.body.dataset.theme = event.target.value;
   // document.body - to get the data-attribute from body, so you can choose select for theme (data-theme)
 }
 

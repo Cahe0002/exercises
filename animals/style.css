@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  margin: 2rem;
+  padding: 0.5rem;
+}
+
+table {
+  width: 80%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem 0rem;
+}
