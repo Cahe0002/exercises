@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#myColor {
+  background: hsl(200, var(--sat, 80%), var(--light, 50%));
+}
+
+h1 {
+  color: rgb(212, 195, 163);
+}
