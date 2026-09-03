@@ -1,17 +1,18 @@
 [data-theme="hawaii"] {
-  --bg: black;
-  --header-bg-col: red;
-  --text-color: rgb(164, 255, 164);
+  --bg: #f77f00;
+  --header-bg-col: #003049;
+  --text-color: #003049;
+  --h1-text-color: rgb(243, 243, 243);
 }
 
 [data-theme="light"] {
-  --bg: rgb(255, 158, 158);
-  --header-bg-col: rgb(68, 139, 57);
-  --text-color: rgb(22, 47, 22);
+  --bg: #d6e7f7;
+  --header-bg-col: #fff9e6;
+  --text-color: black;
 }
 
 [data-theme="dark"] {
-  --bg: rgb(0, 23, 105);
-  --header-bg-col: rgb(255, 237, 40);
-  --text-color: rgb(0, 130, 142);
+  --bg: black;
+  --header-bg-col: rgb(74, 74, 74);
+  --text-color: rgb(180, 180, 180);
 }

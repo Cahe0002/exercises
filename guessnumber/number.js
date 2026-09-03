@@ -33,3 +33,5 @@ function reset() {
   guessCount = 0; //count going to 0 again
   secretNumber = Math.floor(Math.random() * (max - min + 1)) + min; // secretNumber starting again.
 }
+
+

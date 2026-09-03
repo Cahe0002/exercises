@@ -43,6 +43,32 @@ function filterActive(event) {
   displayList(filtered);
 }
 
+function sortList(sortBy) {
+  let sortedList = allAnimals;
+  if (sortBy === "name") {
+    sortedList = sortedList.sort(sortByName);
+  } else if (sortBy === "type") {
+    sortedList = sortedList.sort(sortByType);
+  }
+  displayList(sortedList);
+}
+
+function sortByName(animalA, animalB) {
+  if (animalA < animalB) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
+
+function sortByType(animalA, animalB) {
+  if (animalA.type > animalB.type) {
+    return -1;
+  } else {
+    return 1;
+  }
+}
+
 // Test for button working in console.log()
 
 //   if (filter === "cat") {
